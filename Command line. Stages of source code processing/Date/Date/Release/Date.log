@@ -1,9 +1,6 @@
-﻿Сборка начата 15.02.2022 23:16:18.
+﻿Сборка начата 17.02.2022 01:49:40.
 Уровень детализации журнала: Normal.     1>Проект "D:\Лабы\КПО\Command line. Stages of source code processing\Date\Date\Date.vcxproj" в узле 2 (целевые объекты Build).
-     1>PrepareForBuild:
-         Создание каталога "D:\Лабы\КПО\Command line. Stages of source code processing\Date\Release\".
-         Создание каталога "Release\Date.tlog\".
-       InitializeBuildStatus:
+     1>InitializeBuildStatus:
          Создание "Release\Date.tlog\unsuccessfulbuild", так как было задано "AlwaysCreate".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\CL.exe /c /Zi /nologo /W3 /WX- /diagnostics:column /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /permissive- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc142.pdb" /external:W3 /Gd /TP /analyze- /FC /errorReport:prompt Source.cpp
@@ -12,9 +9,9 @@
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Лабы\КПО\Command line. Stages of source code processing\Date\Release\Date.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Лабы\КПО\Command line. Stages of source code processing\Date\Release\Date.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG:incremental /LTCGOUT:"Release\Date.iobj" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Лабы\КПО\Command line. Stages of source code processing\Date\Release\Date.lib" /MACHINE:X86 /SAFESEH Release\Source.obj
          Создание кода
-         Previous IPDB not found, fall back to full compilation.
-     1>D:\Лабы\КПО\Command line. Stages of source code processing\Date\Date\Source.cpp(52): warning C4715: is_correct_date: значение возвращается не при всех путях выполнения
-         All 16 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+         2 of 16 functions (12.5%) were compiled, the rest were copied from previous compilation.
+           0 functions were new in current compilation
+           0 functions had inline decision re-evaluated but remain unchanged
          Создание кода завершено
          Date.vcxproj -> D:\Лабы\КПО\Command line. Stages of source code processing\Date\Release\Date.exe
        FinalizeBuildStatus:
@@ -28,12 +25,7 @@
        (Целевой объект ClCompile) -> 
          D:\Лабы\КПО\Command line. Stages of source code processing\Date\Date\Source.cpp(54,13): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
 
-
-       "D:\Лабы\КПО\Command line. Stages of source code processing\Date\Date\Date.vcxproj" (целевой объект Build ) (1) ->
-       (Целевой объект Link) -> 
-         D:\Лабы\КПО\Command line. Stages of source code processing\Date\Date\Source.cpp(52): warning C4715: is_correct_date: значение возвращается не при всех путях выполнения
-
-    Предупреждений: 2
+    Предупреждений: 1
     Ошибок: 0
 
-Прошло времени 00:00:00.59
+Прошло времени 00:00:01.20

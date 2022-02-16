@@ -31,7 +31,7 @@ int near_br_day(int day, int month, int year) {
 	int day_br = 28, month_br = 3;
 	if (month == month_br && day == day_br)
 		return 0;
-	else if (month > 3)
+	else if (month > month_br)
 		return 365 - (serial_number(day, month, year + 1) - serial_number(day_br, month_br, year + 1));
 	else if (month == month_br) {
 		if (day > day_br && leap_year(year + 1))
