@@ -31,7 +31,7 @@ int near_br_day(int day, int month, int year) {
 	int day_br = 28, month_br = 3;
 	if (month == month_br && day == day_br)
 		return 0;
-	else if (month > 3)
+	else if (month > month_br)
 		return 365 - (serial_number(day, month, year + 1) - serial_number(day_br, month_br, year + 1));
 	else if (month == month_br) {
 		if (day > day_br && leap_year(year + 1))
@@ -54,17 +54,17 @@ bool is_correct_date(int year) {
 void main() {
 	setlocale(LC_ALL, "Ru");
 	int date;
-	cout << "Ââåäèòå äàòó (ÄÄÌÌÃÃÃÃ): ";
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã²Ã³ (Ã„Ã„ÃŒÃŒÃƒÃƒÃƒÃƒ): ";
 	cin >> date;
 	split_date(date);
 	if (is_correct_date(year) == false || year == 0) {
-		cout << "Íåêîğğåêòíûé ââîä";
+		cout << "ÃÃ¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã¢Ã¢Ã®Ã¤";
 		exit(0);
 	}
 	if (leap_year(year))
-		cout << year << " - âèñîêîñíûé" << endl;
+		cout << year << " - Ã¢Ã¨Ã±Ã®ÃªÃ®Ã±Ã­Ã»Ã©" << endl;
 	else
-		cout << year << " - íå âèñîêîñíûé" << endl;
-	cout << serial_number(day, month, year) << " - ïîğÿäêîâûé íîìåğ äíÿ" << endl;
-	cout << near_br_day(day, month, year) << " - äî áëèæàéøåãî ìîåãî äíÿ ğîæäåíèÿ (28.03)" << endl;
+		cout << year << " - Ã­Ã¥ Ã¢Ã¨Ã±Ã®ÃªÃ®Ã±Ã­Ã»Ã©" << endl;
+	cout << serial_number(day, month, year) << " - Ã¯Ã®Ã°Ã¿Ã¤ÃªÃ®Ã¢Ã»Ã© Ã­Ã®Ã¬Ã¥Ã° Ã¤Ã­Ã¿" << endl;
+	cout << near_br_day(day, month, year) << " - Ã¤Ã® Ã¡Ã«Ã¨Ã¦Ã Ã©Ã¸Ã¥Ã£Ã® Ã¬Ã®Ã¥Ã£Ã® Ã¤Ã­Ã¿ Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿ (28.03)" << endl;
 }
