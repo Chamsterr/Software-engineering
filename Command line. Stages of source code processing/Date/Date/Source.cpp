@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int day, month, year;
-int arr_days[12] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+int arr_days[] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 void split_date(int date) {
 	int delta_for_day = 1000000, delta_for_month_year = 10000;
 	day = date / delta_for_day;
@@ -29,7 +29,7 @@ int near_br_day(int day, int month, int year) {
 		return 0;
 	else if (month > month_br)
 		return 365 - (serial_number(day, month, year + 1) - serial_number(day_br, month_br, year + 1));
-	else if (month == month_br) {
+	else if (month == month_br && day > day_br) {
 		if (day > day_br && leap_year(year + 1))
 			return 366 - abs(day - day_br);
 		else
