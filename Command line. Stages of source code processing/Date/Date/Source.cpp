@@ -1,12 +1,8 @@
 #include <iostream>
 using namespace std;
-
 int day, month, year;
-int arr_days[11];
-
+int arr_days[12] {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 void split_date(int date) {
-	for (int i = 0; i < 11; i++)
-		arr_days[i] = 28 + ((i + 1) + (i + 1) / 8) % 2 + 2 % (i + 1) + 1 / (i + 1) * 2;
 	int delta_for_day = 1000000, delta_for_month_year = 10000;
 	day = date / delta_for_day;
 	month = date / delta_for_month_year - day * 100;
@@ -45,26 +41,26 @@ int near_br_day(int day, int month, int year) {
 bool is_correct_date(int year) {
 	if (day == 29 && leap_year(year))
 		return true;
-	if (day > arr_days[month - 1])
+	if (day > arr_days[month-1])
 		return false;
 	if (month > 12)
 		return false;
 }
 
 void main() {
-	setlocale(LC_ALL, "Ru");
+	setlocale(LC_ALL, "RUS");
 	int date;
-	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã Ã²Ã³ (Ã„Ã„ÃŒÃŒÃƒÃƒÃƒÃƒ): ";
+	cout << "Ââåäèòå äàòó (ÄÄÌÌÃÃÃÃ): ";
 	cin >> date;
 	split_date(date);
-	if (is_correct_date(year) == false || year == 0) {
-		cout << "ÃÃ¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã¢Ã¢Ã®Ã¤";
+	if (is_correct_date(year) == false || year == 0 || date <= 1000000) {
+		cout << "Íåêîððåêòíûé ââîä";
 		exit(0);
 	}
 	if (leap_year(year))
-		cout << year << " - Ã¢Ã¨Ã±Ã®ÃªÃ®Ã±Ã­Ã»Ã©" << endl;
+		cout << year << " - âèñîêîñíûé" << endl;
 	else
-		cout << year << " - Ã­Ã¥ Ã¢Ã¨Ã±Ã®ÃªÃ®Ã±Ã­Ã»Ã©" << endl;
-	cout << serial_number(day, month, year) << " - Ã¯Ã®Ã°Ã¿Ã¤ÃªÃ®Ã¢Ã»Ã© Ã­Ã®Ã¬Ã¥Ã° Ã¤Ã­Ã¿" << endl;
-	cout << near_br_day(day, month, year) << " - Ã¤Ã® Ã¡Ã«Ã¨Ã¦Ã Ã©Ã¸Ã¥Ã£Ã® Ã¬Ã®Ã¥Ã£Ã® Ã¤Ã­Ã¿ Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã¨Ã¿ (28.03)" << endl;
+		cout << year << " - íå âèñîêîñíûé" << endl;
+	cout << serial_number(day, month, year) << " - ïîðÿäêîâûé íîìåð äíÿ" << endl;
+	cout << near_br_day(day, month, year) << " - äî áëèæàéøåãî ìîåãî äíÿ ðîæäåíèÿ (28.03)" << endl;
 }
