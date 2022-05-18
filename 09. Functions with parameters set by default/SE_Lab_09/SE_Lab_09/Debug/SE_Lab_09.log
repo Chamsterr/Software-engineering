@@ -1,0 +1,19 @@
+﻿Сборка начата 17.05.2022 0:55:43.
+Уровень детализации журнала: Normal.     1>Проект "D:\Labs\КПО\09. Functions with parameters set by default\SE_Lab_09\SE_Lab_09\SE_Lab_09.vcxproj" в узле 2 (целевые объекты Build).
+     1>InitializeBuildStatus:
+         Обращение к "Debug\SE_Lab_09.tlog\unsuccessfulbuild".
+       ClCompile:
+         Для всех выходных данных обновления не требуется.
+       Link:
+         Для всех выходных данных обновления не требуется.
+         SE_Lab_09.vcxproj -> D:\Labs\КПО\09. Functions with parameters set by default\SE_Lab_09\Debug\SE_Lab_09.exe
+       FinalizeBuildStatus:
+         Файл "Debug\SE_Lab_09.tlog\unsuccessfulbuild" удаляется.
+         Обращение к "Debug\SE_Lab_09.tlog\SE_Lab_09.lastbuildstate".
+     1>Сборка проекта "D:\Labs\КПО\09. Functions with parameters set by default\SE_Lab_09\SE_Lab_09\SE_Lab_09.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:00.02
